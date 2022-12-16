@@ -1,0 +1,57 @@
+#include<iostream>
+
+using namespace std;
+
+void func(){
+
+    long long x, y;
+
+    cin >> x >> y;
+
+    long long n = y - x;
+
+    int sum = 0;
+
+    for(int i = 1;;i++){
+
+        if(n <= i){
+
+            sum++;
+
+            break;
+
+        }
+
+        if(n < i * 2){
+
+            sum += 2;
+
+            break;
+
+        }
+
+        sum += 2;
+
+        n -= i * 2;
+
+        if(n == 0)
+
+            break;
+
+    }
+
+    cout << sum << endl;
+
+}
+
+int main(){
+
+    int n;
+
+    cin >> n;
+
+    for(int i = 0; i < n; i++)
+
+        func();
+
+}
